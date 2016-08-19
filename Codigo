@@ -1,17 +1,29 @@
-## Declaramos la ruta del proyecto
-APP_ROOT = File.dirname(__FILE__)
+class Controlador
+  # constructor de la clase. En esta verificaremos
+  # si existe el archivo plano con los estudiantes
+  # y si no creamos uno nuevo
+  def initialize(path=nil)
+  end
 
-# Agregamos la ruta del directorio lib a nuestro proyecto para despreocuparnos
-# al agregarla en todo momento
-# File.join(APP_ROOT, 'lib') =>  APP_ROOT/lib
-$:.unshift( File.join(APP_ROOT, 'lib') )
+  # launch! este metodo tiene un loop que va a recibir las acciones
+  # que tendra la aplicacion para procesarlas,
+  # llama al encabezado y pie de aplicacion al principio y al final
+  def launch!
+    introduction
+    conclusion
+  end
 
-# Le decimos a Ruby que vamos a utilizar el controlador
-require 'controlador'
+  # Encabezado de la aplicacion
+  def introduction
+    puts "#" * 60
+    puts "\n\n--- Bienvenido a al tutorial de CODEHERO ---\n"
+    puts "Este ejemplo pertenece a la serie Ruby desde Cero.\n\n"
+  end
 
-# Inicializamos nuestro controlador
-controlador = Controlador.new('aspitantes.txt')
-
-# Disparamos nuestro proceso principal
-controlador.launch!
-
+  # Pie de la aplicacion
+  def conclusion
+    puts "#" * 60
+    puts "\n\n--- Bienvenido a al tutorial de CODEHERO ---\n\n"
+    puts "Este ejemplo pertenece a la serie Ruby desde Cero.\n\n"
+  end
+end
