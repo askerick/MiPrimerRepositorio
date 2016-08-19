@@ -1,0 +1,17 @@
+## Declaramos la ruta del proyecto
+APP_ROOT = File.dirname(__FILE__)
+
+# Agregamos la ruta del directorio lib a nuestro proyecto para despreocuparnos
+# al agregarla en todo momento
+# File.join(APP_ROOT, 'lib') =>  APP_ROOT/lib
+$:.unshift( File.join(APP_ROOT, 'lib') )
+
+# Le decimos a Ruby que vamos a utilizar el controlador
+require 'controlador'
+
+# Inicializamos nuestro controlador
+controlador = Controlador.new('estudiantes.txt')
+
+# Disparamos nuestro proceso principal
+controlador.launch!
+
