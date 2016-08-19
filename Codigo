@@ -10,7 +10,7 @@ $:.unshift( File.join(APP_ROOT, 'lib') )
 require 'controlador'
 
 # Inicializamos nuestro controlador
-controlador = Controlador.new('estudiantes.txt')
+controlador = Controlador.new('aspitantes.txt')
 
 # Disparamos nuestro proceso principal
 controlador.launch!
