@@ -13,7 +13,7 @@ class Controlador
     conclusion
   end
 
-  # Encabezado de la aplicacion
+  # PRueba de la aplicacion
   def introduction
     puts "#" * 60
     puts "\n\n--- Bienvenido a al tutorial de CODEHERO ---\n"
